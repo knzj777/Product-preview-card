@@ -1,0 +1,158 @@
+@import "reset";
+@import "fonts";
+@import "colors";
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+//my code
+
+p,
+h2 {
+  font-family: "Montserrat";
+}
+
+body {
+  background-color: $cream;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.product-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $white;
+  border-radius: 10px;
+  flex-basis: 500px;
+  width: 666px;
+}
+
+picture {
+  height: 500px;
+
+  img {
+    height: 500px;
+    border-radius: 10px 0 0 10px;
+  }
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  line-height: 2rem;
+  padding: 0 3rem;
+  height: 500px;
+  gap: 1.5rem;
+
+  .product-type {
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 0.4rem;
+  }
+
+  .product-title h2 {
+    font-family: "Fraunces";
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+}
+
+.product-description {
+  line-height: 1.8rem;
+  /*max-width: 300px;
+  word-wrap: break-word;*/
+}
+
+.product-price {
+  display: flex;
+  margin: 10px 0 10px 0;
+
+  p:nth-of-type(1) {
+    font-family: "Fraunces";
+    font-size: 2.3rem;
+    color: $darkcyan;
+    margin-right: 1.5rem;
+  }
+
+  p:nth-of-type(2) {
+    text-decoration: line-through;
+    font-size: 1.1rem;
+  }
+}
+
+.button {
+  border: none;
+  background-color: $darkcyan;
+  border-radius: 10px;
+  color: $white;
+  height: 3.5rem;
+  width: 100%;
+  font-weight: 700;
+  text-align: center;
+}
+
+.button-cart-icon {
+  padding-right: 10px;
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: $very-dark-cyan;
+}
+
+::selection {
+  color: $cream;
+  background-color: $darkcyan;
+}
+
+.attribution {
+  transform: translateY(10vh);
+  font-family: "Montserrat";
+
+  a {
+    color: $darkcyan;
+  }
+}
+
+@media (max-width: 680px) {
+  .product-container {
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .product-info {
+    padding: 2rem;
+    height: auto;
+  }
+
+  main {
+    height: auto;
+    margin-top: 30px;
+  }
+
+  picture {
+    width: 100%;
+    height: auto;
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px 10px 0 0;
+    }
+  }
+}
